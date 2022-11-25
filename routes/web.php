@@ -21,6 +21,8 @@ use App\Http\Controllers\teamsController;
 
 Route::get("/",[playersController::class,"viewData"]);
 
+// Routes for players
+
 Route::view("player/create","players.create");
 Route::post("/player/save",[playersController::class,"saveData"]);
 Route::get("/player",[playersController::class,"viewData"]);
@@ -29,7 +31,7 @@ Route::get("/player/{id}/delete",[playersController::class,"deleteData"]);
 Route::get("player/{id}/edit",[playersController::class,"editData"]);                                                                                                                                                                                                                                                                                                               
 Route::post("player/edit",[playersController::class,"update"])->name('editdata');
 
-// // teams route
+// Routes for team
 
 Route::view("team/create","teams.create");
 Route::post("team/save",[teamsController::class,"saveData"]);
